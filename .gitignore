@@ -1,0 +1,82 @@
+# Archivos específicos del sistema operativo
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Entornos virtuales
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de caché de Python
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Archivos de caché de Django
+*.log
+local_settings.py
+db.sqlite3
+/media/
+/static_collected/
+/staticfiles/
+.webassets-cache/
+
+# Archivos de compilación de Django
+*.pot
+*.mo
+
+# Archivos de IDE y editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.ropeproject/
+.DS_Store
+ehthumbs.db
+logs/
+*.log
+
+# Archivos de configuración de Django
+# No incluyas settings.py a menos que tengas una razón muy específica.
+# Si tienes datos sensibles en settings.py, considera usar variables de entorno.
+# settings_local.py # Descomenta si usas un archivo de configuracion local
+
+# Archivos de frontend (si los hay)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Archivos de contenedores
+*.dockerignore
+docker-compose.override.yml
+.docker-volume
+
+# Archivos de base de datos
+*.sqlite3
+*.db
+*.bak
+
+# Archivos de testing
+.coverage
+.tox/
+htmlcov/
+
+# Archivos generados automáticamente (ej. por collectstatic)
+/static_root/
+/media_root/
+
+# Archivos de migración de Django
+# Si no quieres versionar los archivos de migración (aunque es común hacerlo),
+# puedes descomentar la siguiente línea. Generalmente, es bueno versionarlos.
+# */migrations/*.py
+
+# Otros archivos que no quieres versionar
+*.env
+.env
+.flaskenv
+*.vscode
