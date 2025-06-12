@@ -9,4 +9,24 @@ urlpatterns = [
         PersonaListView.as_view(),
         name='lista'
     ),
+    path(
+        'detalle/<int:pk>/',
+        PersonaDetailView.as_view(),
+        name='detalle'
+    ),
+    path(
+        'crear/',
+        PersonaCreateView.as_view(),
+        name='crear'
+    ),
+    path(
+        'editar/<int:pk>/',
+        PersonaUpdateView.as_view(),
+        name='editar'
+    ),
+    path(
+        'eliminar/<int:pk>/',
+        PersonaDeleteView.as_view(),
+        name='eliminar'
+    ),
 ]
