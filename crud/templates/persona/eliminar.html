@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-   <h1>Eliminar persona</h1> 
-    <p>¿Estás seguro de que deseas eliminar a {{ persona.nombre }}?</p>
+   <h1>
+    {{ titulo }}
+   </h1> 
+    <p>
+        {{confirm_message}}
+    </p>
     <form method="post">
         {% csrf_token %}
         <button type="submit">Confirmar eliminación</button>
-        <a href="{% url 'persona:lista' %}">Cancelar</a>
+        <a href="{{cancel_url}}">Cancelar</a>
     </form>
 {% endblock content %}

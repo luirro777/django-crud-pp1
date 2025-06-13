@@ -2,7 +2,9 @@
 
 
 {% block content %}
-    
+    <h1>
+        {{ titulo}}
+    </h1>
     {% if personas %}
         <ul>
             
@@ -11,6 +13,9 @@
             {% endfor %}
                 
         </ul>
+    {% else %}
+        <p>No hay personas registradas.</p>
+    
     {% endif %}
         
 {% endblock content %}
