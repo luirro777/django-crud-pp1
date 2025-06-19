@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'persona',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Login redirect URL
+LOGIN_REDIRECT_URL = 'persona:lista'
+
+# Logout redirect URL
+LOGOUT_REDIRECT_URL = 'persona:lista'

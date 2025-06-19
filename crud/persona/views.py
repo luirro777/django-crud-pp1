@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.urls import reverse_lazy
 from .models import Persona
 from django.db.models import Q  
+# Import login mixins if needed
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PersonaListView(ListView):
@@ -26,7 +28,7 @@ class PersonaDetailView(DetailView):
         context['titulo'] = "Detalle de Persona"
         return context
 
-class PersonaCreateView(CreateView):
+class PersonaCreateView(LoginRequiredMixin, CreateView):
     model = Persona
     template_name = "persona/crear.html"
     fields = ['nombre', 'edad', 'email']
@@ -37,7 +39,7 @@ class PersonaCreateView(CreateView):
         context['titulo'] = "Nueva Persona"
         return context
 
-class PersonaUpdateView(UpdateView):
+class PersonaUpdateView(LoginRequiredMixin, UpdateView):
     model = Persona
     template_name = "persona/crear.html"
     fields = ['nombre', 'edad', 'email']
@@ -48,7 +50,7 @@ class PersonaUpdateView(UpdateView):
         context['titulo'] = "Editar Persona"
         return context
 
-class PersonaDeleteView(DeleteView):
+class PersonaDeleteView(LoginRequiredMixin, DeleteView):
     model = Persona
     template_name = "persona/eliminar.html"
     context_object_name = "persona"
